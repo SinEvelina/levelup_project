@@ -336,8 +336,6 @@ line-height: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/******FOOTER DESKTOP**********/
-
 .footer {
     padding-top: 120px;
     width: 100%;
@@ -389,9 +387,9 @@ line-height: 20px;
 /**************MEDIA*******************/
 
 @media (max-width: 425px) {
-    .wrapper {
-    width: 425px;
     
+    .wrapper {
+    width: 100%;
     }
     
     .head {
@@ -463,36 +461,38 @@ line-height: 20px;
     
     
     .blocks {
-
-    margin: 60px 0 85px 0;
-    display: grid;
-    grid-template-columns: repeat(1, 3fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-auto-rows: 74px;
-    grid-auto-columns: 374px;
-    grid-gap: 35px;
-    justify-items: center;
+        margin: 60px 0 85px 0;
+        display: grid;
+        grid-template-columns: repeat(1, 3fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-auto-rows: 74px;
+        grid-auto-columns: 374px;
+        grid-gap: 35px;
+        justify-items: center;
     }
 
-    .blocks div{
-
-    padding: 15px 0;
-    width: 374px;
-    height: 44px;
-    text-indent: 14px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    color: #ffffff;
-    background-color: #528290;
-    border-radius: 60px 60px;
-    box-shadow: 4px 4px 4px rgba(229, 229, 229, 0.18);
+    .blocks div {
+        padding: 15px 0;
+        width: 374px;
+        height: 44px;
+        text-indent: 14px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #ffffff;
+        background-color: #528290;
+        border-radius: 60px 60px;
+        box-shadow: 4px 4px 4px rgba(229, 229, 229, 0.18);
     }
     
     .blocks div:last-child {
     padding: 25px 0;
     height: 24px;
+    }
+
+    .arrow {
+        all: none;
     }
     
     .darker_heading_top {
@@ -549,9 +549,7 @@ line-height: 20px;
         width: 100%;
         height: auto;
         display: block;
-
         padding-top: 90px;
-
     }
     
 
@@ -609,8 +607,7 @@ line-height: 20px;
         -webkit-text-stroke-color: none;
         border: 0;
     }
-
-    /******FOOTER @MEDIA**********/
+   
     .footer {
         padding-top: 60px;
         padding-left: 20px;
@@ -667,7 +664,7 @@ line-height: 20px;
     }
      
     .social_icons_mobile {
-        margin-top: 20px;
+        margin-top: 35px;
         display: block;
         grid-column: 1/3;
         grid-row: 3/4;
@@ -675,5 +672,15 @@ line-height: 20px;
 
     .social_icons_mobile > img {
     
-        margin-right: 28px;
+        margin-right: 23px;
     }
+
+
+
+
+
+
+
+
+
+}
