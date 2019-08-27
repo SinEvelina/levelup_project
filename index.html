@@ -48,9 +48,9 @@
                 <div class="subheader"><span class="capitalize">оказываем</span> премиум-услуги для жильцов </br> с приминением современных технологий</div>
                 
                 <div class="blocks">
-                    <div><span class="capitalize">внести</span> показания счетчиков </br> и оплатить квитанции</div>
-                    <div><span class="capitalize">заказать</span> дополнительные услуги</div>
-                    <div><span class="capitalize">начать</span> сотрудничество</div>
+                    <div class="blocks_items"><span class="capitalize">внести</span> показания счетчиков </br> и оплатить квитанции<img class="blocks_arrow" src="./img/Arrow-1.png"></div>
+                    <div class="blocks_items"><span class="capitalize">заказать</span> дополнительные услуги<img class="blocks_arrow" src="./img/Arrow-1.png"></div>
+                    <div class="blocks_items"><span class="capitalize">начать</span> сотрудничество<img class="blocks_arrow last_arrow" src="./img/Arrow-1.png"></div>
                 </div>
 
                 <div class="darker_heading_top">черная стрела</div>
@@ -73,13 +73,13 @@
         </header>
 
         <div class="adresses_top">
-            <div class="lesnoy">лЕСНОЙ ПР., 26</div>
-            <div class="nevsky">НЕВСКИЙ ПР., 170</div>
+            <div class="lesnoy">лЕСНОЙ ПР., 26<img class="appeared_arrow" src="./img/Arrow.png"></div>
+            <div class="nevsky">НЕВСКИЙ ПР., 170<img class="appeared_arrow" src="./img/Arrow.png"></div>
         </div>
 
         <div class="adresses_bottom">
-            <div class="novgorodskaya">Новгородская ул., 19</div>
-            <div class="medikov">пр. медиков, 29</div>
+            <div class="novgorodskaya">Новгородская ул., 19<img class="appeared_arrow" src="./img/Arrow.png"></div>
+            <div class="medikov">пр. медиков, 29<img class="appeared_arrow" src="./img/Arrow.png"></div>
         </div>
 
 
@@ -101,7 +101,15 @@
                     <div>Ваше сообщение</div>
                     <input class="input_item_message" type="text" placeholder="Введите текст"/>
 
-                    <div class="consent">я согласен (-сна) с политикой обработки персональных </br> данных</div>
+
+                    <div class="consent_wrapper">
+                    <div class="consent">
+                        <input type="checkbox" name="checkbox" class="checkbox" id="checkbox"/>
+                    </div>
+                    <div class="label">
+                        <label for="checkbox">я согласен (-сна) с политикой обработки персональных данных</label>
+                    </div>
+                    </div>
                 </form>
 
                 <input class="button" type="button" value="Отправить"/>
