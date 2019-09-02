@@ -17,8 +17,14 @@
 
         <header class="head">
             <div class="darker">
-                <nav class="menu">
-                    <ul class>
+
+                <nav class="menu" id="menu">
+
+                    <div  class="menu_button" id="menu_button">
+                        <span class="menu_lines"></span>
+                    </div>
+
+                    <ul class="main_menu_list">
                         <li><a href="">о компании</a></li>
                         <li><a href="">услуги</a></li>
                         <li><a href="">информация</a></li>
@@ -27,16 +33,11 @@
                         <li><a href="">контакты</a></li>
                         <li><a href="">личный кабинет</a></li>
                     </ul>
+
                 </nav>
 
                 <!--Для экранов 425px-->
-                <div class="menu_mobile">
-                    <div class="burger_menu">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    </div>
-
+                <div class="mobile_account_block">
                     <div class="h1">черная стрела</div>
 
                     <img src="img/account.png" class="account">
@@ -112,7 +113,7 @@
                     </div>
                 </form>
 
-                <input class="button" type="button" value="Отправить"/>
+                <input class="button" type="button" id="send-button" value="Отправить"/>
             </div>
 
         </div>
@@ -132,6 +133,7 @@
                 </div>
             </div>
             
+    
             <div class="footer_list">
                 <ul>
                     <li>Компания</li>
@@ -179,5 +181,7 @@
 
         
     </div>
+
+<script src="js/script.js"></script>
 </body>
 </html>

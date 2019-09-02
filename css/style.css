@@ -22,7 +22,7 @@
     background-color: rgba(16, 18, 24, 0.73);
 }
 
-.menu > ul {
+.main_menu_list {
     margin-left: 250px;
     margin-right: 100px;
     display: flex;
@@ -30,15 +30,15 @@
     justify-content: space-between;
 }
 
-.menu > ul li{
+.main_menu_list > li{
     text-transform: capitalize;
 }
 
-.menu > ul li:nth-child(5) {
+.main_menu_list > li:nth-child(5) {
     text-transform: uppercase;
 }
 
-.menu > ul > li > a {
+.main_menu_list > li > a {
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
@@ -46,11 +46,11 @@
     color: #ffffff;
 }
 
-.menu > ul > li > a:hover {
+.main_menu_list > li > a:hover {
     color: #87D9F1;
 }
 
-.menu_mobile {
+.mobile_account_block {
     display: none;
 }
 
@@ -363,13 +363,22 @@ form div {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
     text-align: bottom;
+    text-shadow: none;
 
-    border: 1px solid #000000;
-    border-radius: 30px 30px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 0 solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, .5);
+    outline-offset: 0px;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+.button:hover {
+    cursor: pointer;
 }
 
 .footer {
@@ -429,74 +438,137 @@ form div {
 @media (max-width: 425px) {
     
     .wrapper {
-    width: 100%;
+        width: 100%;
+        position: relative;
+        overflow-x: hidden;
+
     }
     
     .head {
-    width: 100%;
-    background-image: url(../img/Rectangle_2.png) ;
+        width: 100%;
+        background-image: url(../img/Rectangle_2.png) ;
     }
     
     .darker {
-    width: 425px;
-    height: 1730px;
+        width: 425px;
+        height: 1730px;
+        padding-top: 0px;
     }
     
-    .menu {
-    display: none;
+    .menu_button {
+        position: fixed;
+        top: 55px;
+        left: 10px;
+        width: 50px;
+        height: 25px;
+        z-index: 30;
     }
     
-    .menu_mobile {
-    padding-left: 13px;
-    padding-right: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
+    .menu_lines,
+    .menu_lines::after,
+    .menu_lines::before {
+        position: absolute;
+        width: 50px;
+        height: 2px;
+        background-color: #fff;
+    }
+
+    .menu_lines {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .menu_lines::before {
+        content: "";
+        top: -12px;
+    }
+
+    .menu_lines::after {
+        content: "";
+        top: 12px;
+    }
+
+    .menu_button:hover {
+        filter: brightness(2.7);
+    }
+
+    .menu_active .menu_lines{
+        background-color: transparent;
+    }
+
+    .menu_active .menu_lines::before{
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .menu_active .menu_lines::after{
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    .main_menu_list {
+        padding: 100px;
+        margin: 0; 
+        position: fixed;
+        z-index: 20;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+        background-color: #2a2a2a;
+        left: -150%;
+    }
+
+    .menu_active .main_menu_list {
+        left: 0%;
+    }
+
+
     
+
+    .mobile_account_block {
+        position: relative;
+        padding-top: 55px;
+        padding-left: 75px;
+        padding-right: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-around;
+        z-index: 10;
     }
     
-    .burger_menu {
-    display: inline-block;
-    width: 50px;
-    height: 25px;
-    }
-    
-    .burger_menu div {
-    margin-bottom: 8px;
-    width: 40px;
-    height: 0;
-    border: 1px solid #FFFFFF;
-    }
     
     h1 {
-    display: none;
+        display: none;
     }
     
     .h1 {
-    margin-left: 18px;
-    margin-right: 55px;
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 30px;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
+        
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
     }
     
     .account {
-    width: 31px;
-    height: 34px;
+        width: 31px;
+        height: 34px;
     }
     
     h2 {
-    margin-top: 100px;
-    margin-left: 25px;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 44px;
+        margin-top: 100px;
+        margin-left: 25px;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
     }
     
     .subheader {
-    display: none;
+        display: none;
     }
     
     
@@ -531,6 +603,10 @@ form div {
         height: 24px;
     }
     
+    .blocks_arrow {
+        display: none;
+    }
+
     .darker_heading_top {
         margin-top: 145px;
         margin-bottom: 65px;
@@ -556,7 +632,7 @@ form div {
 
 
     .adresses_top {
-        margin-top: 1025px;
+        margin-top: 980px;
         height: 810px;
         display: grid;
         grid-template-columns: 1fr;
@@ -642,11 +718,12 @@ form div {
         -webkit-text-stroke-width: 0;
         -webkit-text-stroke-color: none;
         border: 0;
+        
     }
    
+
     .footer {
         padding-top: 60px;
-        padding-left: 20px;
         width: 100%;
         height: auto;
 
@@ -654,6 +731,10 @@ form div {
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 95px 1fr 150px;
         grid-column-gap: 25px;
+    }
+
+    .footer_heading {
+        padding-left: 20px;
     }
 
     .social {
@@ -664,6 +745,7 @@ form div {
     }
 
     .tel_number_mobile {
+        padding-left: 20px;
         display: block;
         width: 176px;
         height: 29px;
@@ -684,7 +766,10 @@ form div {
         display: inline-block;
     }
 
+
+
     .footer > div:nth-child(2) {
+        padding-left: 20px;
         grid-column: 1/2;
         grid-row: 2/3;
     }
@@ -700,6 +785,7 @@ form div {
     }
      
     .social_icons_mobile {
+        padding-left: 20px;
         margin-top: 35px;
         display: block;
         grid-column: 1/3;
