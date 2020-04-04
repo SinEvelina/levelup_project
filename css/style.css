@@ -1,44 +1,53 @@
-.wrapper {
-    width: 100%;
-    height: auto;
-
+body {
     font-family: Montserrat;
     color: #FFFFFF;
+    background-color: #2C2C2C;
 }
-
-.head {
+ 
+header {
     width: 100%;
-    height: 750px;
-    background-image: url(../img/Rectangle.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    height: 743px;
+    background: no-repeat center url("../img/Rectangle.png");
     background-size: cover;
-}
-
-.darker {
-    padding-top: 50px;
-    height: 1500px;
-    width: 100%;
     background-color: rgba(16, 18, 24, 0.73);
+    position: relative;
 }
 
-.main_menu_list {
-    margin-left: 250px;
-    margin-right: 100px;
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(16, 18, 24, 0.73);
+    z-index: 2;
+}
+
+.container {
+    padding-top: 50px;
+    padding-left: 125px;
+    position: relative;
+    z-index: 3;
+}
+
+/************** Navigation ************/
+nav {
+    margin-left: calc(243px - 125px);
+    margin-right: 135px;
+}
+
+nav > ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.main_menu_list > li{
-    text-transform: capitalize;
-}
-
-.main_menu_list > li:nth-child(5) {
+nav > ul > li:nth-child(5) {
     text-transform: uppercase;
 }
 
-.main_menu_list > li > a {
+nav > ul > li > a {
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
@@ -46,85 +55,86 @@
     color: #ffffff;
 }
 
-.main_menu_list > li > a:hover {
+nav > ul > li > a:hover {
     color: #87D9F1;
 }
 
-.mobile_account_block {
-    display: none;
-}
+/************** Headings ************/
 
 h1 {
-    margin: 195px 0 0 120px;
+    margin-top: 195px;
     font-weight: 600;
     font-size: 52px;
     line-height: 63px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    
 }
 
-h2 {
-    margin: 10px 0 0 120px;
+.subheader {
+    margin-top: 20px;
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
 }
 
-.subheader {
-    margin: 60px 0 0 120px;
+h2 {
+    margin-top: 55px;
+    margin-right: 700px;
     font-weight: 500;
     font-size: 28px;
     line-height: 34px;
 }
 
-.capitalize {
-    text-transform: capitalize;
+/************** Options ************/
+.options {
+    display: flex;
+    justify-content: space-between;
+    width: 1197px;
+    position: absolute;
+    bottom: -64px;
+    left: 120px;
+    z-index: 3;
 }
 
-.blocks {
-    margin: 200px 120px 0 120px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
-}
-
-.blocks_items{
-    padding: 35px 25px 0 25px;
-    width: 300px;
-    height: 90px;
+.options > div {
+    box-sizing: border-box;
+    padding: 39px 29px 0 28px;
+    width: 345px;
+    height: 142px;
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
     color: #397C8F;
     background-color: #ffffff;
-    border-radius: 5px 5px;
+    border-radius: 6px 6px;
     box-shadow: 4px 4px 4px rgba(229, 229, 229, 0.18);
     cursor: pointer;
+    position: relative;
 }
 
-.blocks_arrow {
+.options_arrow {
     display: block;
-    padding-left: 220px;
-    padding-top: 8px;
+    position: absolute;
+    bottom: 35px;
+    left: 248px;
 }
 
-.last_arrow {
-    padding-top: 28px;
-}
-
-.darker_heading_top,
-.darker_heading_bottom {
-    margin-top: 130px;
-    margin-bottom: 85px;
+/************ Features **************/
+.features_header {
     text-align: center;
     display: flex;
     justify-content: center;
-
     font-weight: 600;
     font-size: 32px;
     line-height: 39px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+}
+
+.features_header_top {
+    margin-top: 214px;
+    margin-bottom: 100px;
 }
 
 .features {
@@ -144,111 +154,78 @@ h2 {
     text-align: center;
 }
 
+.features_header_bottom {
+    margin-top: 165px;
+    margin-bottom: 113px;
+}
 
-
+/*********** Adresses **************/
 
 .adresses_top {
-    margin-top: 800px;
-    width: 100%;
-    height: 400px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 29px;
-    text-transform: uppercase;
-
-    text-shadow: 1px 1px 1px #000;
-
 }
 
 .adresses_bottom {
-    width: 100%;
-    height: 400px;
     display: grid;
     grid-template-columns: 2fr 1fr;
+}
 
+
+.adresses_block {
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
     text-transform: uppercase;
-
     text-shadow: 1px 1px 1px #000;
-}
+    -webkit-text-stroke: 0.5px #000;
 
-
-
-.lesnoy {
+    box-sizing: border-box;
+    height: 405px;
     padding-top: 310px;
     padding-left: 60px;
-    background-image: url(../img/lesnoy.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+
+.lesnoy {
+    background-image: url(../img/lesnoy.png);
+}
+
+.nevsky {
+    background-image: url(../img/nevsky.png);
+}
+
+.novgorodskaya {
+    background-image: url(../img/novg.png);
+}
+
+.medikov {
+    background-image: url(../img/med.png);
 }
 
 .appeared_arrow {
     display: none;
 }
 
-.nevsky {
-    padding-top: 310px;
-    padding-left: 60px;
-    background-image: url(../img/nevsky.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-}
-
-.novgorodskaya {
-    padding-top: 310px;
-    padding-left: 60px;
-    background-image: url(../img/novg.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.medikov {
-    padding-top: 310px;
-    padding-left: 60px;
-    background-image: url(../img/med.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.adresses_top > div:hover {
+.adresses_block:hover {
     font-weight: 600;
-    font-size: 32px;
-    line-height: 39px;
-    text-transform: uppercase;
+    font-size: 26px;
+    line-height: 34px;
     color: #87D9F1;
-    transition: 0.2s;
+    transition: 0.5s;
     cursor: pointer;
 }
 
-.adresses_bottom > div:hover {
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 39px;
-    text-transform: uppercase;
-    color: #87D9F1;
-    transition: 0.2s;
-    cursor: pointer;
-}
-
-.adresses_top > div:hover .appeared_arrow{
+.adresses_block:hover .appeared_arrow{
     display: inline-block;
     padding-left: 20px;
+    transition: 1s;
 }
 
-.adresses_bottom > div:hover .appeared_arrow{
-    display: inline-block;
-    padding-left: 20px;
-}
+/********** Fill in form **********/
 
 .fill_form {
     width: 100%;
@@ -363,32 +340,30 @@ form div {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: black;
     text-align: bottom;
     text-shadow: none;
-
-    border: 0 solid;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-    outline: 1px solid;
-    outline-color: rgba(255, 255, 255, .5);
-    outline-offset: 0px;
-    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-
+    border: 1px solid #000;
+    border-radius: 30px 30px;
+    box-sizing: border-box;
+    padding-top: calc((46px - 20px) / 2);
+    margin: 0 auto;
+    -webkit-text-stroke: 0.5px #000;
 }
 
 .button:hover {
     cursor: pointer;
 }
 
+/************** Footer *************/
+
 .footer {
     padding-top: 120px;
     width: 100%;
     height: 290px;
     background-color: #1E1C1C;
-
     display: grid;
-    grid-template-columns: 500px repeat(2, 1fr) 2fr;
+    grid-template-columns: 492px 248px 290px 1fr;;
+    -webkit-text-stroke: 0.5px #000;
 }
 
 .footer_heading {
@@ -431,378 +406,4 @@ form div {
 
 .social_icons_mobile {
     display: none;
-}
-
-/**************MEDIA*******************/
-
-@media (max-width: 425px) {
-    
-    .wrapper {
-        width: 100%;
-        position: relative;
-        overflow-x: hidden;
-
-    }
-    
-    .head {
-        width: 100%;
-        background-image: url(../img/Rectangle_2.png) ;
-    }
-    
-    .darker {
-        width: 425px;
-        height: 1730px;
-        padding-top: 0px;
-    }
-    
-    .menu_button {
-        position: fixed;
-        top: 55px;
-        left: 10px;
-        width: 50px;
-        height: 25px;
-        z-index: 30;
-    }
-    
-    .menu_lines,
-    .menu_lines::after,
-    .menu_lines::before {
-        position: absolute;
-        width: 50px;
-        height: 2px;
-        background-color: #fff;
-    }
-
-    .menu_lines {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-
-    .menu_lines::before {
-        content: "";
-        top: -12px;
-    }
-
-    .menu_lines::after {
-        content: "";
-        top: 12px;
-    }
-
-    .menu_button:hover {
-        filter: brightness(2.7);
-    }
-
-    .menu_active .menu_lines{
-        background-color: transparent;
-    }
-
-    .menu_active .menu_lines::before{
-        top: 0;
-        transform: rotate(45deg);
-    }
-
-    .menu_active .menu_lines::after{
-        top: 0;
-        transform: rotate(-45deg);
-    }
-
-    .main_menu_list {
-        padding: 100px;
-        margin: 0; 
-        position: fixed;
-        z-index: 20;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 100%;
-        width: 100%;
-        background-color: #2a2a2a;
-        left: -150%;
-    }
-
-    .menu_active .main_menu_list {
-        left: 0%;
-    }
-
-
-    
-
-    .mobile_account_block {
-        position: relative;
-        padding-top: 55px;
-        padding-left: 75px;
-        padding-right: 20px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: space-around;
-        z-index: 10;
-    }
-    
-    
-    h1 {
-        display: none;
-    }
-    
-    .h1 {
-        
-        font-weight: 600;
-        font-size: 25px;
-        line-height: 30px;
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
-    }
-    
-    .account {
-        width: 31px;
-        height: 34px;
-    }
-    
-    h2 {
-        margin-top: 100px;
-        margin-left: 25px;
-        font-weight: 600;
-        font-size: 36px;
-        line-height: 44px;
-    }
-    
-    .subheader {
-        display: none;
-    }
-    
-    
-    .blocks {
-        margin: 60px 0 85px 0;
-        display: grid;
-        grid-template-columns: repeat(1, 3fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-auto-rows: 74px;
-        grid-auto-columns: 374px;
-        grid-gap: 35px;
-        justify-items: center;
-    }
-
-    .blocks_items {
-        padding: 15px 0;
-        width: 374px;
-        height: 44px;
-        text-indent: 14px;
-        text-align: center;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 24px;
-        color: #ffffff;
-        background-color: #528290;
-        border-radius: 60px 60px;
-        box-shadow: 4px 4px 4px rgba(229, 229, 229, 0.18);
-    }
-    
-    .blocks_items:last-child {
-        padding: 25px 0;
-        height: 24px;
-    }
-    
-    .blocks_arrow {
-        display: none;
-    }
-
-    .darker_heading_top {
-        margin-top: 145px;
-        margin-bottom: 65px;
-    }
-
-    .features {
-        margin: 0;
-        padding: 0;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-
-        justify-items: center;
-        grid-row-gap: 24px;
-    }
-
-    .features p {
-        width: 365px;
-    }
-
-    .darker_heading_bottom {
-        margin: 75px 0;
-    }
-
-
-    .adresses_top {
-        margin-top: 980px;
-        height: 810px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-
-        font-size: 28px;
-        line-height: 34px;
-    }
-    
-    .adresses_bottom {
-        height: 405px;
-        display: grid;
-        grid-template: 1fr / 1fr;
-
-        font-size: 28px;
-        line-height: 34px;
-    }
-    
-    .medikov {
-        display: none;
-    }
-
-    
-
-    .fill_form {
-        width: 100%;
-        height: auto;
-        display: block;
-        padding-top: 90px;
-    }
-    
-
-    .contact_us {
-        width: 100%;
-        margin-top: 0;
-        margin-bottom: 75px;
-    }
-
-    .main_info {
-        padding: 0 50px;
-        height: 55px;
-        overflow: hidden;
-        text-indent: 0;
-      
-    }
-
-    .hidden {
-        display: none;
-    }
-
-    .additional_info {
-        display: none;
-    }
-
-    .user_message {
-        margin: 70px 20px 0 20px;
-        width: 385px;
-    }
-
-    .input_item {
-        width: 385px;
-    }
-
-    .input_item_message {
-        width: 385px;
-    }
-
-    .consent {
-        display: none;
-    }
-
-    .button {
-        margin-top: 5px;
-        margin-bottom: 95px;
-
-        width: 271px;
-        height: 62px;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 24px;
-        letter-spacing: 0.05em;
-
-        -webkit-text-stroke-width: 0;
-        -webkit-text-stroke-color: none;
-        border: 0;
-        
-    }
-   
-
-    .footer {
-        padding-top: 60px;
-        width: 100%;
-        height: auto;
-
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 95px 1fr 150px;
-        grid-column-gap: 25px;
-    }
-
-    .footer_heading {
-        padding-left: 20px;
-    }
-
-    .social {
-        padding: 0;
-        grid-area: 1/1/2/3;
-        justify-items: start;
-
-    }
-
-    .tel_number_mobile {
-        padding-left: 20px;
-        display: block;
-        width: 176px;
-        height: 29px;
-
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 29px;
-        align-items: left;
-        text-transform: uppercase;
-        color: #87D9F1;
-    }
-
-    .social_icons {
-        display: none;
-    }
-
-    .display_in_mobile {
-        display: inline-block;
-    }
-
-
-
-    .footer > div:nth-child(2) {
-        padding-left: 20px;
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-
-    .footer > div:nth-child(3) {
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-
-  
-    .footer > div:nth-child(4) {
-        display: none;
-    }
-     
-    .social_icons_mobile {
-        padding-left: 20px;
-        margin-top: 35px;
-        display: block;
-        grid-column: 1/3;
-        grid-row: 3/4;
-    }
-
-    .social_icons_mobile > img {
-    
-        margin-right: 23px;
-    }
-
-
-
-
-
-
-
-
-
 }

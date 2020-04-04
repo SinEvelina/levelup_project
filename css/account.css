@@ -1,0 +1,43 @@
+body {
+    font-family: Montserrat;
+    color: #FFFFFF;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+}
+.sidebar {
+    background-color: #2C2C2C;
+}
+/************** Navigation ************/
+nav {
+    margin-left: calc(243px - 125px);
+    margin-right: 135px;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav > ul > li{
+    text-transform: capitalize;
+}
+
+nav > ul > li:nth-child(5) {
+    text-transform: uppercase;
+}
+
+nav > ul > li > a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav > ul > li > a:hover {
+    color: #87D9F1;
+}
