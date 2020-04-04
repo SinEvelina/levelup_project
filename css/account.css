@@ -1,19 +1,111 @@
 body {
-    font-family: Montserrat;
+    font-family: 'Montserrat';
     color: #FFFFFF;
+    box-sizing: border-box;
 }
 
 .wrapper {
     height: 100vh;
     width: 100%;
+    display: grid;
+    grid-template-columns: 345px 1fr;
 }
+
+/************* Sidebar ************/
 .sidebar {
+    font-family: Montserrat;
+    font-weight: 500;
     background-color: #2C2C2C;
 }
-/************** Navigation ************/
+
+.container {
+    padding-left: 51px;
+    padding-top: 48px;
+}
+
+.avatar {
+    margin-bottom: 20px;
+}
+
+.name {
+    margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.address {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.personal_info {
+    margin-bottom: 84px;
+}
+
+.options {
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    margin-bottom: 75px;
+}
+
+.options > div + div {
+    margin-top: 20px;
+}
+
+.options::before {
+    content: '';
+    position: absolute;
+    width: 246px;
+    height: 1px;
+    top: -40px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.applications {
+    position: relative;
+}
+
+.applications::after {
+    content: '1';
+    width: 23px;
+    height: 23px;
+    top: -2px;
+    left: 150px;
+    text-align: center;
+    padding-top: 2px;
+    box-sizing: border-box;
+    border-radius: 50% 50%;
+    position: absolute;
+    color: #117A99;
+    background-color: #E0E0E0;
+}
+
+.log_out {
+    margin-bottom: 23px;
+}
+
+.social_icons > img + img {
+    padding-left: 21px;
+}
+
+/************* Main-section ************/
+.main-section {
+    font-weight: 500;
+    background-color: #F6F6F6;
+}
+
+.main-section__container {
+    width: 831px;
+    margin-top: 58px;
+    margin-left: 143px;
+}
+
+/**** navigation *****/
 nav {
-    margin-left: calc(243px - 125px);
-    margin-right: 135px;
+    width: 827px;
+    margin-bottom: 60px;
 }
 
 nav > ul {
@@ -22,22 +114,75 @@ nav > ul {
     justify-content: space-between;
 }
 
-nav > ul > li{
-    text-transform: capitalize;
-}
-
 nav > ul > li:nth-child(5) {
     text-transform: uppercase;
 }
 
 nav > ul > li > a {
-    font-weight: 500;
     font-size: 18px;
     line-height: 22px;
+    color: #2C2C2C;
     text-decoration: none;
-    color: #ffffff;
 }
 
 nav > ul > li > a:hover {
     color: #87D9F1;
+    transition: 0.5s;
+}
+
+.services_heading {
+    font-size: 24px;
+    color: #528290;
+    margin-bottom: 38px;
+}
+
+.tags {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 28px;
+    color: #528290;
+}
+
+.tags > div:first {
+
+}
+
+.services {
+    margin-top: calc(51px - 35px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services > div {
+    margin-top: 35px;
+    width: 250px;
+    height: 180px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1.2px solid #528290;
+}
+
+.services__title {
+    padding-top: 25px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #528290;
+}
+
+.services__content {
+    padding-left: 20px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #2C2C2C;
+}
+
+.services__arrow {
+    padding-left: 165px;
 }
